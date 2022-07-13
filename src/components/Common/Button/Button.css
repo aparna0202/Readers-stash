@@ -1,0 +1,33 @@
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 120px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+.hollowed {
+  color: #fff;
+  background-color: transparent;
+}
+
+.hollowed:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.rounded {
+  border-radius: 25px;
+}
