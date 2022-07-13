@@ -1,0 +1,82 @@
+.bookDetailPage {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px;
+}
+.leftContainer {
+  flex: 0.5;
+  font-family: "Roboto", sans-serif;
+}
+.title {
+  font-size: 24px;
+  position: relative;
+}
+.title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 53px;
+}
+
+.subTitle {
+  font-size: 16px;
+}
+.description {
+  padding-top: 35px;
+  font-size: 18px;
+}
+.description b {
+  font-size: 20px;
+  display: block;
+}
+.otherDetails {
+  font-size: 18px;
+  padding-top: 35px;
+}
+.rightContainer {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .bookDetailPage {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .leftContainer {
+    flex: 0.6;
+  }
+  .title {
+    font-size: 35px;
+  }
+  .title::after {
+    background-color: white;
+  }
+  .subTitle {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 24px;
+  }
+  .description b {
+    font-size: 26px;
+  }
+  .otherDetails {
+    font-size: 20px;
+  }
+  .rightContainer {
+    flex: 0.4;
+    padding-left: 20px;
+    /* width: 40%; */
+  }
+  .bookCover {
+    width: 40%;
+    position: relative;
+  }
+}
