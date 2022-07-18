@@ -8,14 +8,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <Header>
+      <Header>
         <HeaderLink url="/aboutus" text="About Us" />
         <HeaderLink url="/features" text="features" />
         <HeaderLink url="/services" text="Services" />
         <HeaderLink url="/membership" text="Membership" />
-      </Header> */}
-      <Homepage />
-      <BookDetailPage />
+      </Header>
     </>
   );
 }

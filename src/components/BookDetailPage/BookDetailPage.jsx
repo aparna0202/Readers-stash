@@ -1,5 +1,9 @@
 import React from "react";
 import "./BookDetailPage.css";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { API_URL } from "../../common/api";
+import { useState } from "react";
 
 const BookDetailPage = () => {
   const props = {
@@ -18,6 +22,17 @@ const BookDetailPage = () => {
     },
     pageCount: 336,
   };
+
+  let { isbn } = useParams();
+  const [bookData, setBookData] = useState(null);
+  useEffect(() => {
+    fetch(`${API_URL}?q=isbn:${isbn}`).then((result) =>
+      result
+        .json()
+        .then((result) => result.items)
+        .then((result) => setBookData(result))
+    );
+  }, [isbn]);
   return (
     <div className="bookDetailPage">
       <div className="leftContainer">
