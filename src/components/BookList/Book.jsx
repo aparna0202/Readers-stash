@@ -23,7 +23,7 @@ const Book = (props) => {
     <div
       className="book"
       onClick={() =>
-        window.open(`/BookDetails/${props.industryIdentifiers}`, "_blank")
+        window.open(`/details/${props.industryIdentifiers}`, "_blank")
       }
     >
       <img
