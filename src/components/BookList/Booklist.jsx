@@ -25,14 +25,18 @@ const Booklist = ({ genre }) => {
   }, [genre]);
 
   return (
-    <div className="bookList">
+    <div className="bookList ">
       {books.length > 0 &&
         books.map((book) => (
           <Book
             authorName={
               book.volumeInfo.authors ? book.volumeInfo.authors[0] : "N/A"
             }
-            publishedDate={book.volumeInfo.publishedDate}
+            publishedDate={
+              book.volumeInfo.publishedDate
+                ? book.volumeInfo.publishedDate
+                : "NA"
+            }
             bookName={book.volumeInfo.title}
             publisher={book.volumeInfo.publisher}
             description={book.volumeInfo.description}

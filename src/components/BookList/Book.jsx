@@ -18,7 +18,6 @@ const Book = (props) => {
   //   },
   //   pageCount: 336,
   // };
-
   return (
     <div
       className="book"

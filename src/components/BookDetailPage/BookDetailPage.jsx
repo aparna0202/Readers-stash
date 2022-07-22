@@ -25,7 +25,9 @@ const BookDetailPage = () => {
 
   let { isbn } = useParams();
   const [bookData, setBookData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
+    setIsLoaded(true);
     fetch(`${API_URL}?q=isbn:${isbn}`).then((result) =>
       result
         .json()
@@ -33,7 +35,11 @@ const BookDetailPage = () => {
         .then((result) => setBookData(result))
     );
   }, [isbn]);
-  return (
+  const Shimmer = () => {
+    return <div className="shimmer-animation skeleton">shimmer Book</div>;
+  };
+
+  return isLoaded ? (
     <>
       {bookData.map((result) => (
         <div className="bookDetailPage">
@@ -78,6 +84,8 @@ const BookDetailPage = () => {
         </div>
       ))}
     </>
+  ) : (
+    <Shimmer />
   );
 };
 
