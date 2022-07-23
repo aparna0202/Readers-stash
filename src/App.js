@@ -7,6 +7,7 @@ import { FaUser } from "react-icons/fa";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Booklist from "./components/BookList/Booklist";
+import Searchbar from "./components/Searchbar/Searchbar";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="details/:isbn" element={<BookDetailPage />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="Cover" element={<Cover />} />
+        <Route path="/search" element={<Searchbar />} />
       </Routes>
     </>
   );
