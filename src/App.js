@@ -10,6 +10,7 @@ import Booklist from "./components/BookList/Booklist";
 import Searchbar from "./components/Searchbar/Searchbar";
 
 function App() {
+  let wishlistedBooks = [];
   return (
     <>
       <Header>

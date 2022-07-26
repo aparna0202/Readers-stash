@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.searchContainer::after {
+  display: none;
+}
+.searchResults {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0px 700px;
+  top: 400px;
+}

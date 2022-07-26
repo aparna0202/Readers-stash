@@ -1,16 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .book {
   height: 250px;
   min-height: 300px;
   width: 100%;
   margin-bottom: 35px;
   padding: 20px;
+  position: relative;
 
   display: flex;
 
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.4);
+}
+.wishlistIcon {
+  position: absolute;
+  right: 10px;
 }
 
 .bookImage {
