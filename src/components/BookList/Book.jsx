@@ -1,7 +1,12 @@
 import React from "react";
-import BookDetailPage from "../BookDetailPage/BookDetailPage";
+import { useState } from "react";
+import { FaRegHeart } from "react-icons/fa";
 import "./Book.css";
+import { wishlistedBooks } from ".../App.js";
 const Book = (props) => {
+  const handleOnClick = () => {
+    wishlistedBooks;
+  };
   // const props = {
   //   authorName: "DK",
   //   publishedDate: "2020-03-05",
@@ -19,32 +24,37 @@ const Book = (props) => {
   //   pageCount: 336,
   // };
   return (
-    <div
-      className="book"
-      onClick={() =>
-        window.open(`/details/${props.industryIdentifiers}`, "_blank")
-      }
-    >
-      <img
-        src={props.imageLinks.thumbnail}
-        alt={`${props.bookName} Thumbnail`}
-        className="bookImage"
-      />
-      <div className="info">
-        <div className="bookTitleContainer">
-          <div className="bookName">{props.bookName}</div>
-          <div className="subtitle">{props.subtitle}</div>
-        </div>
-        <div className="detailsContainer">
-          <div className="authorName">
-            <b>Author Name: </b>
-            {props.authorName}
+    <div className="book">
+      <div className="wishlistIcon" onClick={handleOnClick}>
+        <FaRegHeart />
+      </div>
+      <div
+        className="bookDetails"
+        onClick={() =>
+          window.open(`/details/${props.industryIdentifiers}`, "_blank")
+        }
+      >
+        <img
+          src={props.imageLinks.thumbnail}
+          alt={`${props.bookName} Thumbnail`}
+          className="bookImage"
+        />
+        <div className="info">
+          <div className="bookTitleContainer">
+            <div className="bookName">{props.bookName}</div>
+            <div className="subtitle">{props.subtitle}</div>
           </div>
-          <div className="publication">
-            <b>Publisher:</b> {props.publisher}
-          </div>
-          <div className="date">
-            <b>Published Year:</b> {props.publishedDate.split("-")[0]}
+          <div className="detailsContainer">
+            <div className="authorName">
+              <b>Author Name: </b>
+              {props.authorName}
+            </div>
+            <div className="publication">
+              <b>Publisher:</b> {props.publisher}
+            </div>
+            <div className="date">
+              <b>Published Year:</b> {props.publishedDate.split("-")[0]}
+            </div>
           </div>
         </div>
       </div>
