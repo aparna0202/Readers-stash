@@ -1,59 +1,74 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import "./Book.css";
-import { wishlistedBooks } from ".../App.js";
-const Book = (props) => {
+
+const Book = ({
+  industryIdentifiers,
+  imageLinks = false,
+  bookName = "NA",
+  subtitle = "NA",
+  authorName = "NA",
+  publisher = "NA",
+  publishedDate = false,
+}) => {
+  const [wishlistedBook, setWishlistedBook] = useState(false);
+  const isbn = `${industryIdentifiers}`;
+
   const handleOnClick = () => {
-    wishlistedBooks;
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+
+    const index = wishlist.indexOf(isbn);
+    if (index > -1) {
+      wishlist.splice(index, 1);
+      setWishlistedBook(false);
+    } else {
+      wishlist.push(isbn);
+      setWishlistedBook(true);
+    }
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
   };
-  // const props = {
-  //   authorName: "DK",
-  //   publishedDate: "2020-03-05",
-  //   bookName: "The Physics Book",
-  //   publisher: "Dorling Kindersley Ltd",
-  //   description:
-  //     "Explore the laws and theories of physics in this accessible introduction to the forces that shape our Universe, our planet, and our everyday lives. Using a bold, graphic-led approach The Physics Book sets out more than 80 key concepts and discoveries that have defined the subject and influenced our technology since the beginning of time. With the focus firmly on unpicking the thought behind each theory - as well as exploring when and how each idea and breakthrough came about - seven themed chapt...",
-  //   subtitle: "Big Ideas Simply Explained",
-  //   imageLinks: {
-  //     smallThumbnail:
-  //       "http://books.google.com/books/content?id=3FfDDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-  //     thumbnail:
-  //       "http://books.google.com/books/content?id=3FfDDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-  //   },
-  //   pageCount: 336,
-  // };
+
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+    const index = wishlist.indexOf(isbn);
+    if (index > -1) {
+      setWishlistedBook(true);
+    } else {
+      setWishlistedBook(false);
+    }
+  }, [wishlistedBook, isbn]);
+
   return (
     <div className="book">
       <div className="wishlistIcon" onClick={handleOnClick}>
-        <FaRegHeart />
+        {!wishlistedBook ? <FaRegHeart /> : <FaHeart />}
       </div>
       <div
         className="bookDetails"
-        onClick={() =>
-          window.open(`/details/${props.industryIdentifiers}`, "_blank")
-        }
+        onClick={() => window.open(`/details/${industryIdentifiers}`, "_blank")}
       >
         <img
-          src={props.imageLinks.thumbnail}
-          alt={`${props.bookName} Thumbnail`}
+          src={imageLinks.thumbnail}
+          alt={`${bookName} Thumbnail`}
           className="bookImage"
         />
         <div className="info">
           <div className="bookTitleContainer">
-            <div className="bookName">{props.bookName}</div>
-            <div className="subtitle">{props.subtitle}</div>
+            <div className="bookName">{bookName}</div>
+            <div className="subtitle">{subtitle}</div>
           </div>
           <div className="detailsContainer">
             <div className="authorName">
               <b>Author Name: </b>
-              {props.authorName}
+              {authorName}
             </div>
             <div className="publication">
-              <b>Publisher:</b> {props.publisher}
+              <b>Publisher:</b> {publisher}
             </div>
             <div className="date">
-              <b>Published Year:</b> {props.publishedDate.split("-")[0]}
+              <b>Published Year:</b> {publishedDate.split("-")[0]}
             </div>
           </div>
         </div>
