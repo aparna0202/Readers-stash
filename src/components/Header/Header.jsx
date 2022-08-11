@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaBars } from "react-icons/fa";
 
 const Header = (props) => {
   return (
@@ -12,6 +12,9 @@ const Header = (props) => {
           <FaUser />
           <a href="#">Log In</a>
         </div>
+      </div>
+      <div className="hamburger">
+        <FaBars />
       </div>
     </header>
   );

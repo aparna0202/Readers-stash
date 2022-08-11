@@ -19,6 +19,8 @@ function App() {
         <HeaderLink url="/services" text="Services" />
         <HeaderLink url="/membership" text="Membership" />
       </Header>
+      <Cover />
+      <Homepage />
       <Routes>
         <Route path="details/:isbn" element={<BookDetailPage />} />
         <Route path="/home" element={<Homepage />} />

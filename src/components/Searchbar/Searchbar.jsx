@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { API_URL } from "../../common/api";
 import Booklist from "../BookList/Booklist";
+import Button from "../Common/Button/Button";
 import Book from "../BookList/Book";
 import "./Searchbar.css";
 
@@ -17,9 +18,14 @@ const Searchbar = () => {
   };
 
   const handleOnChange = (e) => {
-    e.preventDefault();
     setQuery(e.target.value);
   };
+  const handleKeyDown = (a) => {
+    if (a.keyCode === 13) {
+      handleOnClick();
+    }
+  };
+
   return (
     <div className="search">
       <div className="searchContainer">
@@ -28,8 +34,9 @@ const Searchbar = () => {
           placeholder="Search here"
           className="searchBar"
           onChange={handleOnChange}
+          onKeyDown={handleKeyDown}
         />
-        <button className="searchBtn" onClick={handleOnClick}>
+        <button className="btn" onClick={handleOnClick}>
           <FaSearch />
         </button>
       </div>

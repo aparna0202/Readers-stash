@@ -4,9 +4,9 @@ import "./Homepage.css";
 const Homepage = () => {
   return (
     <div className="home">
-      {/* <Booklist genre="history" />
+      <Booklist genre="history" />
       <Booklist genre="maths" />
-      <Booklist genre="chemistry" /> */}
+      <Booklist genre="chemistry" />
       <Booklist genre="physics" />
     </div>
   );

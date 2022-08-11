@@ -1,10 +1,11 @@
 .header {
   display: flex;
+  height: 40px;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: auto;
   padding: 0 20px;
-  background-color: transparent;
+  position: relative;
 }
 .accountsContainer {
   color: rgb(196, 48, 107);
@@ -14,13 +15,6 @@
   padding-left: 100px;
   font-size: 14px;
 }
-
-.accountsContainer a {
-  padding-left: 8px;
-  text-decoration: none;
-  color: rgb(196, 48, 107);
-  font-size: 16px;
-}
 .navLinkContainer {
   display: flex;
   align-items: center;
@@ -29,4 +23,31 @@
   font-weight: 500;
   text-transform: uppercase;
   font-size: 16px;
+}
+.hamburgerMenu {
+  background-color: black;
+  height: 100px;
+  width: 50px;
+}
+.accountsContainer a {
+  padding-left: 8px;
+  text-decoration: none;
+  color: rgb(196, 48, 107);
+  font-size: 16px;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 60px;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
 }
