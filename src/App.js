@@ -9,6 +9,7 @@ import "./App.css";
 import Booklist from "./components/BookList/Booklist";
 import Searchbar from "./components/Searchbar/Searchbar";
 import WishlistPage from "./components/WishlistPage/WishlistPage";
+import SearchResults from "./components/SearchResults/SearchResults";
 
 function App() {
   return (
@@ -20,12 +21,10 @@ function App() {
         <HeaderLink url="/membership" text="Membership" />
       </Header>
       <Cover />
-      <Homepage />
       <Routes>
         <Route path="details/:isbn" element={<BookDetailPage />} />
-        <Route path="/home" element={<Homepage />} />
-        <Route path="Cover" element={<Cover />} />
-        <Route path="/search" element={<Searchbar />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/wishlist" element={<WishlistPage />} />
       </Routes>
     </>

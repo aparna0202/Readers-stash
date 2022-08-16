@@ -1,16 +1,13 @@
 .search {
   display: flex;
   flex-direction: column;
-  position: relative;
+  z-index: 2;
+  margin-top: 40px;
 }
 .searchContainer {
   display: flex;
-  position: absolute;
-  top: 120px;
-  left: 100px;
 }
 .searchBar {
-  position: relative;
   font-size: 10px;
   padding: 4px 4px;
   border: none;
@@ -23,23 +20,7 @@
   padding: 0px 0px;
 }
 
-.searchContainer::after {
-  display: none;
-}
-.searchResults {
-  position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  margin: 0px 50px;
-  top: 220px;
-}
-
 @media screen and (min-width: 1024px) {
-  .searchContainer {
-    top: 207px;
-    left: 740px;
-  }
   .searchBar {
     width: 400px;
     height: 30px;
@@ -47,9 +28,5 @@
   .btn {
     height: 30px;
     width: 50px;
-  }
-  .searchResults {
-    margin: 0px 700px;
-    top: 450px;
   }
 }
