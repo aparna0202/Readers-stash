@@ -17,7 +17,7 @@ const Booklist = ({ genre }) => {
             const filteredResult = result.filter(
               (book) => book.volumeInfo.industryIdentifiers
             );
-            filteredResult.length = 5;
+            filteredResult.length = 3;
             return filteredResult;
           })
           .then((result) => setBooks(result))

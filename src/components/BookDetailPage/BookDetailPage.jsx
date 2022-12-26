@@ -40,7 +40,7 @@ const BookDetailPage = () => {
   };
 
   return isLoaded ? (
-    <>
+    <div className="container">
       {bookData.map((result) => (
         <div className="bookDetailPage">
           <div className="leftContainer">
@@ -83,7 +83,7 @@ const BookDetailPage = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   ) : (
     <Shimmer />
   );

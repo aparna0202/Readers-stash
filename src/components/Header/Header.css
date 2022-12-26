@@ -1,10 +1,28 @@
 .header {
   display: flex;
+  height: 40px;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
+  position: fixed;
+  box-shadow: 5px 10px 8px #888888;
+  padding: 0px 20px;
+  background: white;
+  z-index: 10;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.name span {
+  color: rgb(196, 48, 107);
+}
+
 .accountsContainer {
   color: rgb(196, 48, 107);
   display: flex;
@@ -12,13 +30,7 @@
   align-items: center;
   padding-left: 100px;
   font-size: 14px;
-}
-
-.accountsContainer a {
-  padding-left: 8px;
-  text-decoration: none;
-  color: rgb(196, 48, 107);
-  font-size: 16px;
+  display: none;
 }
 .navLinkContainer {
   display: flex;
@@ -28,4 +40,27 @@
   font-weight: 500;
   text-transform: uppercase;
   font-size: 16px;
+}
+
+.accountsContainer a {
+  padding-left: 8px;
+  text-decoration: none;
+  color: rgb(196, 48, 107);
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 60px;
+  }
+  .logo {
+    font-size: x-large;
+  }
+  .name {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .accountsContainer {
+    display: block;
+  }
 }

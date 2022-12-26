@@ -1,7 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
 .bookDetailPage {
   display: flex;
+  width: 300px;
+
   flex-direction: column-reverse;
-  padding: 50px;
+  border-radius: 25px;
+  padding: 50px 20px;
+  box-shadow: 5px 10px 8px #888888;
 }
 .leftContainer {
   flex: 0.5;
@@ -86,9 +96,14 @@
 
 @media screen and (min-width: 1024px) {
   .bookDetailPage {
+    width: 1200px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background: rgb(218, 206, 206);
+    padding: 50px 50px;
+
+    gap: 50px;
   }
   .leftContainer {
     flex: 0.6;
@@ -111,13 +126,9 @@
   .otherDetails {
     font-size: 20px;
   }
-  .rightContainer {
-    flex: 0.4;
-    padding-left: 20px;
-    /* width: 40%; */
-  }
+
   .bookCover {
-    width: 40%;
+    width: 250px;
     position: relative;
   }
 }
