@@ -1,7 +1,6 @@
 import React from "react";
-import { useState } from "react";
 import "./Header.css";
-import { FaUser, FaBars, FaTimes, FaBookReader } from "react-icons/fa";
+import { FaUser, FaBookReader } from "react-icons/fa";
 
 const Header = (props) => {
   return (
@@ -16,7 +15,7 @@ const Header = (props) => {
         {props.children}
         <div className="accountsContainer">
           <FaUser />
-          <a href="#">Log In</a>
+          <span>Log In</span>
         </div>
       </div>
     </header>

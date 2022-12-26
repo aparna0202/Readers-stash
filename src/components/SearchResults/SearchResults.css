@@ -2,16 +2,10 @@
   background-color: #fff;
   display: flex;
   justify-content: center;
-  top: 220px;
-  margin: 50px;
+  padding-top: 100px;
 }
 .searchResultsContainer {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-}
-@media screen and (min-width: 1024px) {
-  .searchResults {
-    top: 450px;
-  }
 }

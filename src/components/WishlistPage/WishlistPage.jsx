@@ -1,15 +1,9 @@
-import Book from "../BookList/Book";
+// import Book from "../BookList/Book";
 import { API_URL } from "../../common/api";
-import { useEffect, useState } from "react";
-
-const Test = () => {
-  return <h1>Hello</h1>;
-};
+import { useEffect } from "react";
 
 const WishlistPage = () => {
-  const [wishlistedBook, setWishlistedBook] = useState(
-    () => getBooksfromISBN() || []
-  );
+  const wishlistedBook = () => getBooksfromISBN() || [];
 
   function getBooksfromISBN() {
     const fetchedResult = [];

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header>
-        <HeaderLink url="/aboutus" text="About Us" />
+        <HeaderLink url="/" text="Home" />
         <HeaderLink url="/features" text="features" />
         <HeaderLink url="/wishlist" text="Wishlist" />
         <HeaderLink url="/membership" text="Membership" />
