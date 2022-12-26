@@ -35,19 +35,14 @@
   color: rgb(196, 48, 107);
   font-size: 16px;
 }
-
-.hamburger {
-  display: block;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+.hamburgerMenu {
+  width: 200px;
+  height: 800px;
+  background-color: red;
 }
 
 @media screen and (min-width: 1024px) {
   .header {
     height: 60px;
-  }
-  .hamburger {
-    display: none;
-    cursor: pointer;
   }
 }

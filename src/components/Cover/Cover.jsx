@@ -5,7 +5,6 @@ import "./Cover.css";
 const Cover = () => {
   return (
     <div className="cover">
-      <div className="image"></div>
       <Searchbar />
 
       <div className="textContainer">

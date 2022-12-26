@@ -1,8 +1,10 @@
 import React from "react";
 import "./Header.css";
+import Button from "../Common/Button/Button";
 import { FaUser, FaBars } from "react-icons/fa";
 
 const Header = (props) => {
+  const handleOnClick = () => {};
   return (
     <header className="header">
       <span>LOGO</span>
@@ -13,9 +15,9 @@ const Header = (props) => {
           <a href="#">Log In</a>
         </div>
       </div>
-      <div className="hamburger">
+      <button className="btn" onClick={handleOnClick}>
         <FaBars />
-      </div>
+      </button>
     </header>
   );
 };

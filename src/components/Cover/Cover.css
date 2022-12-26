@@ -1,5 +1,5 @@
 .cover {
-  height: 350px;
+  height: 200px;
 
   background: no-repeat
     url("https://images.unsplash.com/photo-1533669955142-6a73332af4db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1574&q=80");
@@ -8,7 +8,6 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  backdrop-filter: opacity(0.5);
 }
 
 .textContainer {
@@ -19,14 +18,14 @@
 
 .textContainer cite {
   font-size: 12px;
-  padding-left: 35px;
+  padding-left: 45px;
 }
 
 @media screen and (min-width: 1024px) {
-  .img {
-    width: 100%;
-    object-fit: cover;
+  .cover {
+    height: 350px;
   }
+
   .textContainer {
     font-size: 30px;
     font-weight: 700;
