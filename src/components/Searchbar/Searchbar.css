@@ -9,8 +9,10 @@
 }
 .searchBar {
   font-size: 10px;
-  padding: 4px 4px;
   border: none;
+}
+.searchBar:focus {
+  outline: none;
 }
 .btn {
   height: 22px;
@@ -24,6 +26,7 @@
   .searchBar {
     width: 400px;
     height: 30px;
+    padding: 8px 8px;
   }
   .btn {
     height: 30px;

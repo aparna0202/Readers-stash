@@ -6,11 +6,11 @@
 }
 .bookDetailPage {
   display: flex;
+  width: 300px;
 
   flex-direction: column-reverse;
-  background: rgb(218, 206, 206);
   border-radius: 25px;
-  padding: 50px 0px;
+  padding: 50px 20px;
   box-shadow: 5px 10px 8px #888888;
 }
 .leftContainer {
@@ -100,6 +100,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background: rgb(218, 206, 206);
+    padding: 50px 50px;
+
     gap: 50px;
   }
   .leftContainer {
