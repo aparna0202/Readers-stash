@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .headerLink {
-  display: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -10,8 +9,14 @@
   color: black;
   padding: 0px 10px;
   transition: all 0.7s ease;
+  display: none;
 }
 .headerLink:hover {
   color: rgb(196, 48, 107);
   transition: all 0.3s ease;
+}
+@media screen and (min-width: 1024px) {
+  .headerLink {
+    display: block;
+  }
 }
